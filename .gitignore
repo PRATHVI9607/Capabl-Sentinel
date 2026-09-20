@@ -75,6 +75,11 @@ backend/data/fastembed/
 backend/data/flashrank/
 
 # ---------------------------------------------------------------------------
+# Local demo documents — kept out of the repo on purpose
+# ---------------------------------------------------------------------------
+samples/
+
+# ---------------------------------------------------------------------------
 # Local agent + editor wiring — machine-specific, not part of the product
 # ---------------------------------------------------------------------------
 .codegraph/

@@ -62,7 +62,21 @@ def _groq() -> Any | None:
 
 
 def _providers(*, fast: bool) -> list[tuple[str, Any]]:
-    order = [("groq", _groq), ("gemini", _gemini)] if fast else [("gemini", _gemini), ("groq", _groq)]
+    """Providers to try, in order, for this call.
+
+    Groq leads both paths. The PRD put Gemini first for reasoning, but its free
+    tier allows 20 generate_content requests per day on current flash models --
+    four or five analyses before everything 429s. Groq's free allowance is
+    orders of magnitude larger, so it carries the demo and Gemini is the
+    fallback rather than the other way round. Set PREFER_GEMINI=true on a paid
+    Gemini key to restore the original ordering.
+    """
+    order = [("gemini", _gemini), ("groq", _groq)]
+    # Groq leads unless Gemini is explicitly preferred, and short classification
+    # calls go to Groq either way -- they are the frequent ones, and spending a
+    # 20/day quota on them is what exhausts it before the reasoning calls run.
+    if fast or not settings.prefer_gemini:
+        order.reverse()
     return [(name, llm) for name, factory in order if (llm := factory()) is not None]
 
 

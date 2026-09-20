@@ -26,6 +26,9 @@ class Settings(BaseSettings):
     # key. An alias survives the provider rotating its models underneath us,
     # which matters more here than byte-identical reproducibility.
     gemini_model: str = "gemini-flash-latest"
+    # Gemini's free tier is 20 requests/day on current flash models, so Groq
+    # leads by default. Set true when running on a paid Gemini key.
+    prefer_gemini: bool = False
     groq_model: str = "openai/gpt-oss-20b"
 
     # Vector store
