@@ -51,10 +51,10 @@ RUN python -c "from app.rag.embedder import embed_query; embed_query('warm')" \
  && python -c "from app.rag.retriever import _reranker; _reranker()" \
  || echo "model warm-up skipped; they will download on first request"
 
-# Spaces routes public traffic to 7860.
+# 7860 is the Hugging Face convention; Railway, Cloud Run and similar inject
+# their own $PORT. Shell form, so the variable expands at container start and
+# 7860 remains the fallback for a plain `docker run`.
+ENV PORT=7860
 EXPOSE 7860
 
-HEALTHCHECK --interval=30s --timeout=10s --start-period=40s \
-  CMD python -c "import urllib.request;urllib.request.urlopen('http://localhost:7860/health')"
-
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860}
