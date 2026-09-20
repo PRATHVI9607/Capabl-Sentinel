@@ -1,3 +1,6 @@
+# Render Blueprint. This file must sit at the REPOSITORY ROOT to be detected,
+# and the service must be created via "New + > Blueprint" — a manually created
+# Web Service ignores it entirely and builds from the repo root.
 services:
   - type: web
     name: sentinel-api

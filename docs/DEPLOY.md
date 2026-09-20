@@ -52,11 +52,24 @@ corpus the deployed app retrieves against. The source PDFs are not committed.
 
 ## 2. Backend → Render
 
-1. <https://dashboard.render.com> → **New** → **Web Service**
-2. Connect the GitHub repo. Render reads `backend/render.yaml`, which already
-   sets the root directory, build command, start command, health check and
-   Python version. Accept them.
+1. <https://dashboard.render.com> → **New +** → **Blueprint**
+
+   Not "Web Service". A manually created Web Service **ignores `render.yaml`
+   entirely** — it builds from the repository root, fails to find
+   `requirements.txt`, and defaults to whatever Python version Render feels like
+   (3.14 at time of writing, which several pinned dependencies have no wheels
+   for).
+
+2. Connect the GitHub repo. Render reads `render.yaml` **from the repository
+   root** and fills in the root directory (`backend`), build command, start
+   command, health check and Python version. Accept them.
+
 3. Plan: **Free**.
+
+   > **Already created it as a Web Service?** You do not have to start over.
+   > Settings → set **Root Directory** to `backend`, then add `PYTHON_VERSION=3.11.9`,
+   > `ENVIRONMENT=production` and `TRUST_PROXY_HEADERS=true` under Environment,
+   > since those come from the blueprint you are not using.
 4. Set the two secrets under **Environment** (everything else is in the blueprint):
 
    | Key | Value |
