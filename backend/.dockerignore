@@ -1,0 +1,30 @@
+# Source documents are not needed at runtime — the generated indexes already
+# carry their text. Excluding them takes ~158MB off the image.
+data/incidents/*
+data/regulatory/*
+
+# Model caches are re-downloaded during the build's warm-up step.
+data/fastembed/
+data/flashrank/
+
+# Local development state
+.venv/
+venv/
+.env
+*.db
+*.db-shm
+*.db-wal
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Not part of the running service
+tests/
+pyproject.toml
+requirements-dev.txt
+requirements-ocr.txt
+requirements-qdrant.txt
+render.yaml

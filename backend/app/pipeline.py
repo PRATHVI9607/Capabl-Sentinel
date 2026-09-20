@@ -27,6 +27,9 @@ logger = logging.getLogger(__name__)
 
 CACHE_KEY_PREFIX = "analysis:"
 
+# Bounds how many analyses embed at once. See settings.max_concurrent_analyses.
+_slots = asyncio.Semaphore(settings.max_concurrent_analyses)
+
 # What a caller is told when something unexpected breaks. The detail goes to
 # the logs; an anonymous uploader gets no stack trace, path or driver message.
 GENERIC_FAILURE = "Analysis failed. The document could not be processed."
@@ -39,14 +42,28 @@ def cache_key(file_hash: str) -> str:
 async def run_analysis(analysis_id: str, pdf_path: Path, file_name: str, file_hash: str) -> None:
     """Execute the graph and persist the result. Never raises."""
     started_at = time.monotonic()
+    if _slots.locked():
+        await broker.publish(
+            analysis_id,
+            StreamUpdate(
+                stage="queued",
+                status="started",
+                message="Another analysis is running. Yours starts next.",
+            ),
+        )
     try:
-        async with asyncio.timeout(settings.analysis_timeout_seconds):
-            report = await _analyse(analysis_id, pdf_path, file_name, started_at)
+        # wait_for rather than asyncio.timeout: the latter is 3.11+ and the
+        # deployment target runs 3.10.
+        async with _slots:
+            report = await asyncio.wait_for(
+                _analyse(analysis_id, pdf_path, file_name, started_at),
+                timeout=settings.analysis_timeout_seconds,
+            )
     except DocumentLoadError as exc:
         # Safe to surface: it describes the caller's own file, nothing internal.
         await _fail(analysis_id, str(exc))
         return
-    except TimeoutError:
+    except asyncio.TimeoutError:
         logger.warning("Analysis %s exceeded %ss", analysis_id, settings.analysis_timeout_seconds)
         await _fail(analysis_id, "Analysis timed out. Try a shorter document.")
         return

@@ -7,7 +7,7 @@ are denormalised onto the row.
 
 from __future__ import annotations
 
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 
 from sqlalchemy import JSON, DateTime, Float, String
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -29,5 +29,5 @@ class Analysis(Base):
     report: Mapped[dict | None] = mapped_column(JSON, default=None)
     error: Mapped[str | None] = mapped_column(String(1024), default=None)
     created_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), default=lambda: datetime.now(UTC), index=True
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), index=True
     )

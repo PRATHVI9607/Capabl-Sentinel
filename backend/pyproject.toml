@@ -1,10 +1,10 @@
 [tool.black]
 line-length = 108
-target-version = ["py311"]
+target-version = ["py310"]
 
 [tool.ruff]
 line-length = 108
-target-version = "py311"
+target-version = "py310"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM", "A", "BLE", "RET", "ARG", "RUF100", "ERA"]

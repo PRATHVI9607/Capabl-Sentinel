@@ -181,3 +181,25 @@ class TestToolIntrospection:
         ]
         assert tools["compute_risk_score"]["is_async"] is False
         assert tools["parse_incident_report"]["is_async"] is True
+
+
+class TestConcurrencyLimit:
+    """Analyses queue rather than exhausting a small instance's memory."""
+
+    def test_a_second_upload_is_told_it_is_queued(self, client: TestClient, monkeypatch) -> None:
+        import asyncio
+
+        from app import pipeline
+
+        # Hold the only slot so the next analysis has to wait for it.
+        held = asyncio.Semaphore(1)
+        monkeypatch.setattr(pipeline, "_slots", held)
+        asyncio.get_event_loop_policy().new_event_loop().run_until_complete(held.acquire())
+
+        analysis_id = upload(client, "report.pdf", UNPARSEABLE_PDF).json()["analysis_id"]
+        body = client.get(f"/analyze/{analysis_id}/stream").text
+        assert '"stage":"queued"' in body, "a waiting caller should be told, not left silent"
+
+    def test_the_limit_is_configurable(self) -> None:
+        # One by default because a free instance cannot embed twice at once.
+        assert settings.max_concurrent_analyses >= 1

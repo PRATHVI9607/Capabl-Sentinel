@@ -69,6 +69,12 @@ class Settings(BaseSettings):
     max_pdf_pages: int = 300
     max_extracted_chars: int = 500_000
     analysis_timeout_seconds: int = 180
+    # Analyses run one at a time by default. Embedding and reranking are
+    # CPU-bound and hold ~100MB of model each; two at once on a 512MB / 0.1 vCPU
+    # free instance exhausts it and the platform kills the process. Queueing is
+    # a far better failure mode than an OOM: the SSE stream keeps the waiting
+    # client informed. Raise it on a bigger machine.
+    max_concurrent_analyses: int = 1
     stream_timeout_seconds: int = 300
 
     # Only trust X-Forwarded-For when a proxy you control sets it. On Render and

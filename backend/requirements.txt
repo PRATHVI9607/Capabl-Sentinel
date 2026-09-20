@@ -1,7 +1,11 @@
 # Core API
 fastapi==0.115.6
+# Hugging Face Spaces offers Docker only on paid plans, so the Space runs under
+# the Gradio SDK: space_app.py serves this FastAPI app and mounts a small Gradio
+# landing page so the Space URL is not a 404. Unused outside that deployment.
+gradio==5.9.1
 uvicorn[standard]==0.30.0
-python-multipart==0.0.9
+python-multipart==0.0.20
 pydantic==2.8.2
 pydantic-settings==2.4.0
 httpx==0.27.0

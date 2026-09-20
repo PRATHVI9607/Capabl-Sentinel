@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 
 from fastapi import APIRouter
 
@@ -23,5 +23,5 @@ async def health() -> dict[str, object]:
         "llm_configured": any_provider_configured(),
         "vector_store_backend": vector_store.backend(),
         "vector_store_ready": vector_store.configured(),
-        "timestamp": datetime.now(UTC).isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
     }
