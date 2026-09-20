@@ -1,0 +1,27 @@
+[tool.black]
+line-length = 108
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 108
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "A", "BLE", "RET", "ARG", "RUF100", "ERA"]
+ignore = ["B008"]  # FastAPI dependencies are function calls in defaults by design.
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501", "ARG"]  # fixtures arrive as unused-looking parameters
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+# Any warning is a failure. Nothing in this codebase should emit one, and a new
+# warning from a dependency is something to look at rather than scroll past.
+filterwarnings = [
+    "error",
+    # Third-party cleanup noise surfaced at GC time: Starlette's TestClient portal
+    # socket and pytest-asyncio's event loops. Nothing here owns either resource.
+    "ignore::ResourceWarning",
+    "ignore::pytest.PytestUnraisableExceptionWarning",
+]

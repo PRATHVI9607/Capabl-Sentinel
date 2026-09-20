@@ -1,0 +1,41 @@
+[
+  {"label": "EQUIPMENT", "pattern": [{"LOWER": {"IN": ["conveyor", "press", "lathe", "forklift", "crane", "hoist", "boiler", "compressor", "scaffold", "ladder", "excavator", "grinder", "mixer", "auger", "shredder", "baler", "centrifuge", "manlift", "trencher", "pump", "valve", "reactor", "furnace", "kiln", "elevator", "winch", "welder"]}}]},
+  {"label": "EQUIPMENT", "pattern": [{"LOWER": "aerial"}, {"LOWER": "lift"}]},
+  {"label": "EQUIPMENT", "pattern": [{"LOWER": "storage"}, {"LOWER": "tank"}]},
+  {"label": "EQUIPMENT", "pattern": [{"LOWER": "pressure"}, {"LOWER": "vessel"}]},
+  {"label": "EQUIPMENT", "pattern": [{"LOWER": "power"}, {"LOWER": "press"}]},
+  {"label": "EQUIPMENT", "pattern": [{"LOWER": "relief"}, {"LOWER": "valve"}]},
+  {"label": "EQUIPMENT", "pattern": [{"LOWER": "circuit"}, {"LOWER": "breaker"}]},
+
+  {"label": "CHEMICAL", "pattern": [{"LOWER": {"IN": ["ammonia", "chlorine", "hydrogen", "methane", "propane", "benzene", "toluene", "acetylene", "nitrogen", "sulfuric", "hydrofluoric", "phosgene", "methanol", "acetone", "xylene", "asbestos", "silica", "isocyanate"]}}]},
+  {"label": "CHEMICAL", "pattern": [{"LOWER": "hydrogen"}, {"LOWER": "sulfide"}]},
+  {"label": "CHEMICAL", "pattern": [{"LOWER": "carbon"}, {"LOWER": "monoxide"}]},
+  {"label": "CHEMICAL", "pattern": [{"LOWER": "sulfuric"}, {"LOWER": "acid"}]},
+  {"label": "CHEMICAL", "pattern": [{"LOWER": "natural"}, {"LOWER": "gas"}]},
+
+  {"label": "HAZARD", "pattern": [{"LOWER": {"IN": ["explosion", "fire", "electrocution", "asphyxiation", "engulfment", "entanglement", "amputation", "crush", "collapse", "rupture", "spill", "flashback", "backdraft", "burn"]}}]},
+  {"label": "HAZARD", "pattern": [{"LOWER": "arc"}, {"LOWER": "flash"}]},
+  {"label": "HAZARD", "pattern": [{"LOWER": "confined"}, {"LOWER": "space"}]},
+  {"label": "HAZARD", "pattern": [{"LOWER": "combustible"}, {"LOWER": "dust"}]},
+  {"label": "HAZARD", "pattern": [{"LOWER": "struck"}, {"LOWER": "by"}]},
+  {"label": "HAZARD", "pattern": [{"LOWER": "caught"}, {"LOWER": "in"}]},
+  {"label": "HAZARD", "pattern": [{"LOWER": "fall"}, {"LOWER": "from"}, {"LOWER": "height"}]},
+  {"label": "HAZARD", "pattern": [{"LOWER": "toxic"}, {"LOWER": {"IN": ["atmosphere", "release", "exposure"]}}]},
+
+  {"label": "CONDITION", "pattern": [{"LOWER": {"IN": ["unguarded", "unsecured", "corroded", "overloaded", "obstructed", "defective", "deteriorated", "slippery", "unstable", "unlabelled", "unlabeled"]}}]},
+  {"label": "CONDITION", "pattern": [{"LOWER": "oxygen"}, {"LOWER": "deficient"}]},
+  {"label": "CONDITION", "pattern": [{"LOWER": "poor"}, {"LOWER": {"IN": ["lighting", "housekeeping", "ventilation"]}}]},
+  {"label": "CONDITION", "pattern": [{"LOWER": "inadequate"}, {"LOWER": {"IN": ["ventilation", "training", "supervision", "guarding", "lighting"]}}]},
+  {"label": "CONDITION", "pattern": [{"LOWER": "missing"}, {"LOWER": {"IN": ["guard", "cover", "railing", "guardrail", "label"]}}]},
+  {"label": "CONDITION", "pattern": [{"LOWER": "out"}, {"LOWER": "of"}, {"LOWER": "service"}]},
+
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": "did"}, {"LOWER": "not"}, {"LOWER": {"IN": ["lock", "tag", "verify", "test", "isolate", "report", "follow", "wear", "inspect"]}}]},
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": "without"}, {"LOWER": {"IN": ["locking", "testing", "isolating", "a", "any"]}}]},
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": "failed"}, {"LOWER": "to"}]},
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": "bypassed"}]},
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": "defeated"}]},
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": "reached"}, {"LOWER": "into"}]},
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": "removed"}, {"LOWER": "the"}, {"LOWER": {"IN": ["guard", "cover", "lock", "tag"]}}]},
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": "not"}, {"LOWER": "tied"}, {"LOWER": "off"}]},
+  {"label": "UNSAFE_ACT", "pattern": [{"LOWER": {"IN": ["untrained", "unauthorized", "unauthorised"]}}]}
+]

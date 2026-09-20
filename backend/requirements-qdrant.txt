@@ -1,0 +1,4 @@
+# Optional: only needed when QDRANT_URL is set. The default local vector index
+# needs none of this. qdrant-client pulls grpcio, which is a slow build.
+-r requirements.txt
+qdrant-client==1.9.1

@@ -1,0 +1,74 @@
+{
+  "_comment": "Known precursor patterns per hazard type. known_precursors in the risk formula is the length of the matching list; keywords drive detection against the current report and its retrieved historical matches.",
+  "lockout_tagout": [
+    {"pattern_name": "Energy isolation skipped", "description": "Maintenance performed without isolating the energy source.", "keywords": ["without locking out", "energy not isolated", "failed to lock", "no lockout", "tagout not applied", "machine still running"]},
+    {"pattern_name": "Missing group lockout", "description": "Multiple crews on one machine with no group lock box.", "keywords": ["second shift", "another worker restarted", "group lockout", "restarted the machine", "unaware that"]},
+    {"pattern_name": "Stored energy unreleased", "description": "Residual pressure, spring or gravity energy left in the system.", "keywords": ["stored energy", "residual pressure", "hydraulic pressure", "spring tension", "gravity"]},
+    {"pattern_name": "No written procedure", "description": "No machine-specific isolation procedure existed.", "keywords": ["no written procedure", "procedure did not exist", "verbal instruction"]},
+    {"pattern_name": "Verification step omitted", "description": "Zero-energy state never tested before work began.", "keywords": ["did not verify", "no try step", "attempted start", "zero energy"]}
+  ],
+  "confined_space": [
+    {"pattern_name": "No atmospheric testing", "description": "Entry made without testing oxygen or toxic gas levels.", "keywords": ["not tested", "no gas monitor", "oxygen deficient", "without testing", "atmosphere"]},
+    {"pattern_name": "Untrained rescue attempt", "description": "A would-be rescuer entered and became a second casualty.", "keywords": ["attempted to rescue", "second victim", "co-worker entered", "went in after"]},
+    {"pattern_name": "No entry permit", "description": "Permit-required space entered with no permit issued.", "keywords": ["no permit", "permit was not", "unpermitted entry"]},
+    {"pattern_name": "No attendant posted", "description": "No one stationed outside to monitor the entrant.", "keywords": ["no attendant", "left unattended", "alone in the tank"]},
+    {"pattern_name": "Ventilation absent", "description": "Space not purged or continuously ventilated.", "keywords": ["no ventilation", "not purged", "blower", "inerted"]}
+  ],
+  "machine_guarding": [
+    {"pattern_name": "Guard removed or bypassed", "description": "A fixed or interlocked guard was removed to speed up the task.", "keywords": ["guard removed", "guard was bypassed", "interlock defeated", "safety device disabled"]},
+    {"pattern_name": "Clearing a jam while running", "description": "Operator reached into the point of operation to clear a jam.", "keywords": ["clear a jam", "reached into", "while running", "still in motion", "nip point"]},
+    {"pattern_name": "Nip point unprotected", "description": "Rotating parts, belts or rollers left exposed.", "keywords": ["unguarded", "rotating shaft", "conveyor", "pinch point", "exposed belt"]},
+    {"pattern_name": "Prior near-miss ignored", "description": "The same machine produced earlier close calls with no action.", "keywords": ["previously reported", "near miss", "prior incident", "had happened before"]}
+  ],
+  "fall_protection": [
+    {"pattern_name": "No anchorage used", "description": "Harness worn but never tied off to an anchor point.", "keywords": ["not tied off", "no anchor", "lanyard was not", "unhooked"]},
+    {"pattern_name": "Unprotected edge", "description": "Open edge, hole or skylight without a guardrail or cover.", "keywords": ["unprotected edge", "open hole", "skylight", "no guardrail", "leading edge"]},
+    {"pattern_name": "Improper ladder use", "description": "Ladder unsecured, over-reached, or wrong type for the task.", "keywords": ["ladder", "over-reached", "not secured", "stepladder", "unstable footing"]},
+    {"pattern_name": "Scaffold not inspected", "description": "Scaffold erected or modified without a competent-person check.", "keywords": ["scaffold", "not inspected", "planking", "incomplete"]},
+    {"pattern_name": "Fragile surface walked on", "description": "Worker walked a roof or panel not rated for the load.", "keywords": ["fragile", "roof panel", "gave way", "collapsed underfoot"]}
+  ],
+  "chemical_release": [
+    {"pattern_name": "Corrosion or wall thinning", "description": "Known degradation of piping or vessel walls before failure.", "keywords": ["corrosion", "wall thinning", "erosion", "leak history", "pitting"]},
+    {"pattern_name": "Relief path blocked", "description": "Relief valve isolated, plugged or undersized.", "keywords": ["relief valve", "isolated", "car-sealed", "plugged", "overpressure"]},
+    {"pattern_name": "Management of change skipped", "description": "Equipment or process altered without a formal MOC review.", "keywords": ["management of change", "temporary repair", "modification", "substituted"]},
+    {"pattern_name": "Incompatible materials mixed", "description": "Reactive chemicals combined outside design conditions.", "keywords": ["incompatible", "runaway reaction", "contamination", "mixed"]},
+    {"pattern_name": "Alarm flood or ignored alarm", "description": "Operators had normalised repeated nuisance alarms.", "keywords": ["alarm", "ignored", "nuisance", "alarm flood", "acknowledged"]}
+  ],
+  "fire_explosion": [
+    {"pattern_name": "Combustible dust accumulation", "description": "Dust layers on surfaces provided the secondary explosion fuel.", "keywords": ["dust accumulation", "combustible dust", "layer of dust"]},
+    {"pattern_name": "Ignition source uncontrolled", "description": "Hot work, static or non-rated equipment near flammables.", "keywords": ["spark", "static", "welding", "ignition source", "non-classified"]},
+    {"pattern_name": "Flammable storage violation", "description": "Flammable liquids stored outside approved cabinets or areas.", "keywords": ["flammable storage", "drums", "not grounded", "cabinet"]},
+    {"pattern_name": "Suppression system impaired", "description": "Sprinklers or deluge out of service at the time.", "keywords": ["sprinkler", "out of service", "impaired", "deluge", "fire water"]}
+  ],
+  "electrical": [
+    {"pattern_name": "Energized work without permit", "description": "Work on live parts with no energized-work permit or justification.", "keywords": ["energized", "live parts", "still energized", "troubleshooting"]},
+    {"pattern_name": "Missing arc-flash PPE", "description": "Incorrect or absent arc-rated clothing for the incident energy.", "keywords": ["arc flash", "arc rated", "face shield", "flash hazard"]},
+    {"pattern_name": "Damaged cord or equipment", "description": "Known damaged cords, tools or panels left in service.", "keywords": ["damaged cord", "frayed", "exposed conductor", "missing cover", "open panel"]},
+    {"pattern_name": "No GFCI protection", "description": "Portable tools used in wet locations without GFCI.", "keywords": ["gfci", "ground fault", "wet location", "not grounded"]}
+  ],
+  "struck_by": [
+    {"pattern_name": "No traffic separation", "description": "Pedestrians and mobile equipment sharing an undivided route.", "keywords": ["forklift", "pedestrian", "backing", "blind corner", "no barrier"]},
+    {"pattern_name": "Unsecured load", "description": "Material shifted or fell because it was not restrained.", "keywords": ["unsecured", "load shifted", "fell from", "not strapped"]},
+    {"pattern_name": "Working under suspended load", "description": "Personnel positioned beneath a crane or hoist load.", "keywords": ["suspended load", "under the load", "crane", "rigging", "hoist"]},
+    {"pattern_name": "Spotter absent", "description": "Reversing or blind-lift operation run with no spotter.", "keywords": ["no spotter", "reversing", "signal person"]}
+  ],
+  "hot_work": [
+    {"pattern_name": "No hot work permit", "description": "Cutting or welding started without a permit or hazard review.", "keywords": ["hot work permit", "no permit", "cutting torch", "welding"]},
+    {"pattern_name": "Fire watch absent", "description": "No fire watch during the work or through the post-work period.", "keywords": ["fire watch", "left the area", "smouldering"]},
+    {"pattern_name": "Flammables not cleared", "description": "Combustibles within the required radius were not removed or covered.", "keywords": ["combustibles", "not removed", "35 feet", "nearby"]},
+    {"pattern_name": "Vessel not gas freed", "description": "Work on a tank or line still holding flammable residue.", "keywords": ["gas free", "residue", "not purged", "vapors"]}
+  ],
+  "material_handling": [
+    {"pattern_name": "Overloaded equipment", "description": "Lift or rack loaded beyond its rated capacity.", "keywords": ["capacity", "overloaded", "rated load", "exceeded"]},
+    {"pattern_name": "Unstable stacking", "description": "Material stacked too high or on uneven footing.", "keywords": ["stacked", "toppled", "unstable", "leaning", "collapsed"]},
+    {"pattern_name": "Damaged rigging", "description": "Slings, chains or hooks with known defects kept in service.", "keywords": ["sling", "damaged hook", "not inspected", "chain"]},
+    {"pattern_name": "Manual handling strain", "description": "Repeated heavy lifts with no mechanical aid.", "keywords": ["manual lift", "back injury", "no lifting aid", "repetitive"]}
+  ],
+  "general": [
+    {"pattern_name": "Training gap", "description": "The worker had not been trained on the task or hazard.", "keywords": ["not trained", "no training", "first time", "unfamiliar", "new employee"]},
+    {"pattern_name": "Procedure not followed", "description": "A written procedure existed but was bypassed under time pressure.", "keywords": ["did not follow", "shortcut", "deviation", "time pressure", "production quota"]},
+    {"pattern_name": "Prior warning ignored", "description": "The same hazard had been reported or cited before.", "keywords": ["previously cited", "had reported", "known issue", "prior inspection"]},
+    {"pattern_name": "Inadequate supervision", "description": "No competent person oversaw a high-risk task.", "keywords": ["no supervisor", "unsupervised", "competent person", "left alone"]},
+    {"pattern_name": "Housekeeping breakdown", "description": "Obstructed walkways, spills or clutter in the work area.", "keywords": ["housekeeping", "clutter", "spill", "obstructed", "debris"]}
+  ]
+}

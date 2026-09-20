@@ -1,0 +1,1864 @@
+{
+ "nodes": [
+  {
+   "id": "group-Contracts",
+   "type": "group",
+   "label": "Contracts",
+   "x": -30,
+   "y": -80,
+   "width": 460,
+   "height": 880
+  },
+  {
+   "id": "backend/app/config.py",
+   "type": "file",
+   "file": "modules/app.config.md",
+   "x": 0,
+   "y": 0,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/models/__init__.py",
+   "type": "file",
+   "file": "modules/app.models.md",
+   "x": 0,
+   "y": 130,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/models/output.py",
+   "type": "file",
+   "file": "modules/app.models.output.md",
+   "x": 0,
+   "y": 260,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/models/incident.py",
+   "type": "file",
+   "file": "modules/app.models.incident.md",
+   "x": 0,
+   "y": 390,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/models/risk.py",
+   "type": "file",
+   "file": "modules/app.models.risk.md",
+   "x": 0,
+   "y": 520,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/models/retrieval.py",
+   "type": "file",
+   "file": "modules/app.models.retrieval.md",
+   "x": 0,
+   "y": 650,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "group-Providers",
+   "type": "group",
+   "label": "Providers",
+   "x": 490,
+   "y": -80,
+   "width": 460,
+   "height": 1140
+  },
+  {
+   "id": "backend/app/llm.py",
+   "type": "file",
+   "file": "modules/app.llm.md",
+   "x": 520,
+   "y": 0,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/cache/client.py",
+   "type": "file",
+   "file": "modules/app.cache.client.md",
+   "x": 520,
+   "y": 130,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/db/crud.py",
+   "type": "file",
+   "file": "modules/app.db.crud.md",
+   "x": 520,
+   "y": 260,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/db/session.py",
+   "type": "file",
+   "file": "modules/app.db.session.md",
+   "x": 520,
+   "y": 390,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/stream.py",
+   "type": "file",
+   "file": "modules/app.stream.md",
+   "x": 520,
+   "y": 520,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/db/models.py",
+   "type": "file",
+   "file": "modules/app.db.models.md",
+   "x": 520,
+   "y": 650,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/cache/__init__.py",
+   "type": "file",
+   "file": "modules/app.cache.md",
+   "x": 520,
+   "y": 780,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/db/__init__.py",
+   "type": "file",
+   "file": "modules/app.db.md",
+   "x": 520,
+   "y": 910,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "group-Retrieval",
+   "type": "group",
+   "label": "Retrieval",
+   "x": 1010,
+   "y": -80,
+   "width": 460,
+   "height": 2180
+  },
+  {
+   "id": "backend/app/rag/embedder.py",
+   "type": "file",
+   "file": "modules/app.rag.embedder.md",
+   "x": 1040,
+   "y": 0,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/rag/vector_store.py",
+   "type": "file",
+   "file": "modules/app.rag.vector_store.md",
+   "x": 1040,
+   "y": 130,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/ingest/classifier.py",
+   "type": "file",
+   "file": "modules/app.ingest.classifier.md",
+   "x": 1040,
+   "y": 260,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/ingest/preprocessor.py",
+   "type": "file",
+   "file": "modules/app.ingest.preprocessor.md",
+   "x": 1040,
+   "y": 390,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/knowledge_graph/graph.py",
+   "type": "file",
+   "file": "modules/app.knowledge_graph.graph.md",
+   "x": 1040,
+   "y": 520,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/rag/bm25_index.py",
+   "type": "file",
+   "file": "modules/app.rag.bm25_index.md",
+   "x": 1040,
+   "y": 650,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/rag/compressor.py",
+   "type": "file",
+   "file": "modules/app.rag.compressor.md",
+   "x": 1040,
+   "y": 780,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/rag/local_store.py",
+   "type": "file",
+   "file": "modules/app.rag.local_store.md",
+   "x": 1040,
+   "y": 910,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/rag/qdrant_store.py",
+   "type": "file",
+   "file": "modules/app.rag.qdrant_store.md",
+   "x": 1040,
+   "y": 1040,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/rag/retriever.py",
+   "type": "file",
+   "file": "modules/app.rag.retriever.md",
+   "x": 1040,
+   "y": 1170,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/knowledge_graph/serializer.py",
+   "type": "file",
+   "file": "modules/app.knowledge_graph.serializer.md",
+   "x": 1040,
+   "y": 1300,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/rag/chunker.py",
+   "type": "file",
+   "file": "modules/app.rag.chunker.md",
+   "x": 1040,
+   "y": 1430,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/ingest/loader.py",
+   "type": "file",
+   "file": "modules/app.ingest.loader.md",
+   "x": 1040,
+   "y": 1560,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/ingest/__init__.py",
+   "type": "file",
+   "file": "modules/app.ingest.md",
+   "x": 1040,
+   "y": 1690,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/knowledge_graph/__init__.py",
+   "type": "file",
+   "file": "modules/app.knowledge_graph.md",
+   "x": 1040,
+   "y": 1820,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/rag/__init__.py",
+   "type": "file",
+   "file": "modules/app.rag.md",
+   "x": 1040,
+   "y": 1950,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "group-Tools",
+   "type": "group",
+   "label": "Tools",
+   "x": 1530,
+   "y": -80,
+   "width": 460,
+   "height": 1010
+  },
+  {
+   "id": "backend/app/tools/__init__.py",
+   "type": "file",
+   "file": "modules/app.tools.md",
+   "x": 1560,
+   "y": 0,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/tools/patterns.py",
+   "type": "file",
+   "file": "modules/app.tools.patterns.md",
+   "x": 1560,
+   "y": 130,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/tools/retrieval.py",
+   "type": "file",
+   "file": "modules/app.tools.retrieval.md",
+   "x": 1560,
+   "y": 260,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/tools/parsing.py",
+   "type": "file",
+   "file": "modules/app.tools.parsing.md",
+   "x": 1560,
+   "y": 390,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/tools/streaming.py",
+   "type": "file",
+   "file": "modules/app.tools.streaming.md",
+   "x": 1560,
+   "y": 520,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/tools/scoring.py",
+   "type": "file",
+   "file": "modules/app.tools.scoring.md",
+   "x": 1560,
+   "y": 650,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/tools/actions.py",
+   "type": "file",
+   "file": "modules/app.tools.actions.md",
+   "x": 1560,
+   "y": 780,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "group-Orchestration",
+   "type": "group",
+   "label": "Orchestration",
+   "x": 2050,
+   "y": -80,
+   "width": 460,
+   "height": 2180
+  },
+  {
+   "id": "backend/app/agents/state.py",
+   "type": "file",
+   "file": "modules/app.agents.state.md",
+   "x": 2080,
+   "y": 0,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/base.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.base.md",
+   "x": 2080,
+   "y": 130,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/alert_synthesizer.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.alert_synthesizer.md",
+   "x": 2080,
+   "y": 260,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/document_router.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.document_router.md",
+   "x": 2080,
+   "y": 390,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/entity_extractor.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.entity_extractor.md",
+   "x": 2080,
+   "y": 520,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/error_handler.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.error_handler.md",
+   "x": 2080,
+   "y": 650,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/incident_parser.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.incident_parser.md",
+   "x": 2080,
+   "y": 780,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/pattern_detector.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.pattern_detector.md",
+   "x": 2080,
+   "y": 910,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/priority_alert_synthesizer.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.priority_alert_synthesizer.md",
+   "x": 2080,
+   "y": 1040,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/regulatory_auditor.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.regulatory_auditor.md",
+   "x": 2080,
+   "y": 1170,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/synthesis.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.synthesis.md",
+   "x": 2080,
+   "y": 1300,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/risk_scorer.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.risk_scorer.md",
+   "x": 2080,
+   "y": 1430,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/graph.py",
+   "type": "file",
+   "file": "modules/app.agents.graph.md",
+   "x": 2080,
+   "y": 1560,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/pipeline.py",
+   "type": "file",
+   "file": "modules/app.pipeline.md",
+   "x": 2080,
+   "y": 1690,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/__init__.py",
+   "type": "file",
+   "file": "modules/app.agents.md",
+   "x": 2080,
+   "y": 1820,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py",
+   "type": "file",
+   "file": "modules/app.agents.nodes.md",
+   "x": 2080,
+   "y": 1950,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "group-Transport",
+   "type": "group",
+   "label": "Transport",
+   "x": 2570,
+   "y": -80,
+   "width": 460,
+   "height": 1010
+  },
+  {
+   "id": "backend/app/deps.py",
+   "type": "file",
+   "file": "modules/app.deps.md",
+   "x": 2600,
+   "y": 0,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/api/analyze.py",
+   "type": "file",
+   "file": "modules/app.api.analyze.md",
+   "x": 2600,
+   "y": 130,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/api/health.py",
+   "type": "file",
+   "file": "modules/app.api.health.md",
+   "x": 2600,
+   "y": 260,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/api/history.py",
+   "type": "file",
+   "file": "modules/app.api.history.md",
+   "x": 2600,
+   "y": 390,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/api/tools.py",
+   "type": "file",
+   "file": "modules/app.api.tools.md",
+   "x": 2600,
+   "y": 520,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/api/__init__.py",
+   "type": "file",
+   "file": "modules/app.api.md",
+   "x": 2600,
+   "y": 650,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "backend/app/main.py",
+   "type": "file",
+   "file": "modules/app.main.md",
+   "x": 2600,
+   "y": 780,
+   "width": 400,
+   "height": 90
+  },
+  {
+   "id": "group-Unassigned",
+   "type": "group",
+   "label": "Unassigned",
+   "x": 3090,
+   "y": -80,
+   "width": 460,
+   "height": 230
+  },
+  {
+   "id": "backend/app/__init__.py",
+   "type": "file",
+   "file": "modules/app.md",
+   "x": 3120,
+   "y": 0,
+   "width": 400,
+   "height": 90
+  }
+ ],
+ "edges": [
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/alert_synthesizer.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/alert_synthesizer.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/document_router.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/document_router.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/entity_extractor.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/entity_extractor.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/error_handler.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/error_handler.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/incident_parser.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/incident_parser.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/pattern_detector.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/pattern_detector.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/priority_alert_synthesizer.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/priority_alert_synthesizer.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/regulatory_auditor.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/regulatory_auditor.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/nodes/risk_scorer.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/risk_scorer.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/graph.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/graph.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/alert_synthesizer.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/alert_synthesizer.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/document_router.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/document_router.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/entity_extractor.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/entity_extractor.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/error_handler.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/error_handler.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/incident_parser.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/incident_parser.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/pattern_detector.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/pattern_detector.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/priority_alert_synthesizer.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/priority_alert_synthesizer.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/regulatory_auditor.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/regulatory_auditor.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/__init__.py->backend/app/agents/nodes/risk_scorer.py",
+   "fromNode": "backend/app/agents/nodes/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/risk_scorer.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/alert_synthesizer.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/alert_synthesizer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/alert_synthesizer.py->backend/app/agents/nodes/base.py",
+   "fromNode": "backend/app/agents/nodes/alert_synthesizer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/base.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/alert_synthesizer.py->backend/app/agents/nodes/synthesis.py",
+   "fromNode": "backend/app/agents/nodes/alert_synthesizer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/synthesis.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/document_router.py->backend/app/config.py",
+   "fromNode": "backend/app/agents/nodes/document_router.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/document_router.py->backend/app/ingest/classifier.py",
+   "fromNode": "backend/app/agents/nodes/document_router.py",
+   "fromSide": "right",
+   "toNode": "backend/app/ingest/classifier.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/document_router.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/document_router.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/document_router.py->backend/app/agents/nodes/base.py",
+   "fromNode": "backend/app/agents/nodes/document_router.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/base.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/entity_extractor.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/agents/nodes/entity_extractor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/entity_extractor.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/agents/nodes/entity_extractor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/entity_extractor.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/entity_extractor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/entity_extractor.py->backend/app/agents/nodes/base.py",
+   "fromNode": "backend/app/agents/nodes/entity_extractor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/base.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/entity_extractor.py->backend/app/tools/parsing.py",
+   "fromNode": "backend/app/agents/nodes/entity_extractor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/parsing.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/entity_extractor.py->backend/app/tools/patterns.py",
+   "fromNode": "backend/app/agents/nodes/entity_extractor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/patterns.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/error_handler.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/agents/nodes/error_handler.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/error_handler.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/agents/nodes/error_handler.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/error_handler.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/error_handler.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/error_handler.py->backend/app/tools/streaming.py",
+   "fromNode": "backend/app/agents/nodes/error_handler.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/streaming.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/error_handler.py->backend/app/models/risk.py",
+   "fromNode": "backend/app/agents/nodes/error_handler.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/risk.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/error_handler.py->backend/app/models/output.py",
+   "fromNode": "backend/app/agents/nodes/error_handler.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/incident_parser.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/agents/nodes/incident_parser.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/incident_parser.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/incident_parser.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/incident_parser.py->backend/app/agents/nodes/base.py",
+   "fromNode": "backend/app/agents/nodes/incident_parser.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/base.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/incident_parser.py->backend/app/tools/parsing.py",
+   "fromNode": "backend/app/agents/nodes/incident_parser.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/parsing.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/pattern_detector.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/agents/nodes/pattern_detector.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/pattern_detector.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/agents/nodes/pattern_detector.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/pattern_detector.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/pattern_detector.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/pattern_detector.py->backend/app/agents/nodes/base.py",
+   "fromNode": "backend/app/agents/nodes/pattern_detector.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/base.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/pattern_detector.py->backend/app/tools/patterns.py",
+   "fromNode": "backend/app/agents/nodes/pattern_detector.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/patterns.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/pattern_detector.py->backend/app/tools/retrieval.py",
+   "fromNode": "backend/app/agents/nodes/pattern_detector.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/retrieval.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/priority_alert_synthesizer.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/priority_alert_synthesizer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/priority_alert_synthesizer.py->backend/app/agents/nodes/base.py",
+   "fromNode": "backend/app/agents/nodes/priority_alert_synthesizer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/base.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/priority_alert_synthesizer.py->backend/app/agents/nodes/synthesis.py",
+   "fromNode": "backend/app/agents/nodes/priority_alert_synthesizer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/synthesis.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/regulatory_auditor.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/agents/nodes/regulatory_auditor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/regulatory_auditor.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/agents/nodes/regulatory_auditor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/regulatory_auditor.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/regulatory_auditor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/regulatory_auditor.py->backend/app/agents/nodes/base.py",
+   "fromNode": "backend/app/agents/nodes/regulatory_auditor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/base.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/regulatory_auditor.py->backend/app/tools/retrieval.py",
+   "fromNode": "backend/app/agents/nodes/regulatory_auditor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/retrieval.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/synthesis.py->backend/app/llm.py",
+   "fromNode": "backend/app/agents/nodes/synthesis.py",
+   "fromSide": "right",
+   "toNode": "backend/app/llm.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/synthesis.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/agents/nodes/synthesis.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/synthesis.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/agents/nodes/synthesis.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/synthesis.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/synthesis.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/synthesis.py->backend/app/tools/actions.py",
+   "fromNode": "backend/app/agents/nodes/synthesis.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/actions.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/synthesis.py->backend/app/models/output.py",
+   "fromNode": "backend/app/agents/nodes/synthesis.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/analyze.py->backend/app/cache/client.py",
+   "fromNode": "backend/app/api/analyze.py",
+   "fromSide": "right",
+   "toNode": "backend/app/cache/client.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/analyze.py->backend/app/config.py",
+   "fromNode": "backend/app/api/analyze.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/analyze.py->backend/app/db/crud.py",
+   "fromNode": "backend/app/api/analyze.py",
+   "fromSide": "right",
+   "toNode": "backend/app/db/crud.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/analyze.py->backend/app/deps.py",
+   "fromNode": "backend/app/api/analyze.py",
+   "fromSide": "right",
+   "toNode": "backend/app/deps.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/analyze.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/api/analyze.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/analyze.py->backend/app/pipeline.py",
+   "fromNode": "backend/app/api/analyze.py",
+   "fromSide": "right",
+   "toNode": "backend/app/pipeline.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/analyze.py->backend/app/stream.py",
+   "fromNode": "backend/app/api/analyze.py",
+   "fromSide": "right",
+   "toNode": "backend/app/stream.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/analyze.py->backend/app/models/output.py",
+   "fromNode": "backend/app/api/analyze.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/health.py->backend/app/__init__.py",
+   "fromNode": "backend/app/api/health.py",
+   "fromSide": "right",
+   "toNode": "backend/app/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/health.py->backend/app/config.py",
+   "fromNode": "backend/app/api/health.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/health.py->backend/app/llm.py",
+   "fromNode": "backend/app/api/health.py",
+   "fromSide": "right",
+   "toNode": "backend/app/llm.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/health.py->backend/app/rag/vector_store.py",
+   "fromNode": "backend/app/api/health.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/vector_store.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/history.py->backend/app/db/crud.py",
+   "fromNode": "backend/app/api/history.py",
+   "fromSide": "right",
+   "toNode": "backend/app/db/crud.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/history.py->backend/app/deps.py",
+   "fromNode": "backend/app/api/history.py",
+   "fromSide": "right",
+   "toNode": "backend/app/deps.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/history.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/api/history.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/history.py->backend/app/models/output.py",
+   "fromNode": "backend/app/api/history.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/api/tools.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/api/tools.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/cache/client.py->backend/app/config.py",
+   "fromNode": "backend/app/cache/client.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/db/crud.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/db/crud.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/db/crud.py->backend/app/db/models.py",
+   "fromNode": "backend/app/db/crud.py",
+   "fromSide": "right",
+   "toNode": "backend/app/db/models.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/db/crud.py->backend/app/models/output.py",
+   "fromNode": "backend/app/db/crud.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/db/crud.py->backend/app/models/incident.py",
+   "fromNode": "backend/app/db/crud.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/incident.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/db/session.py->backend/app/config.py",
+   "fromNode": "backend/app/db/session.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/db/session.py->backend/app/db/models.py",
+   "fromNode": "backend/app/db/session.py",
+   "fromSide": "right",
+   "toNode": "backend/app/db/models.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/deps.py->backend/app/db/session.py",
+   "fromNode": "backend/app/deps.py",
+   "fromSide": "right",
+   "toNode": "backend/app/db/session.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/ingest/classifier.py->backend/app/llm.py",
+   "fromNode": "backend/app/ingest/classifier.py",
+   "fromSide": "right",
+   "toNode": "backend/app/llm.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/llm.py->backend/app/config.py",
+   "fromNode": "backend/app/llm.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/main.py->backend/app/__init__.py",
+   "fromNode": "backend/app/main.py",
+   "fromSide": "right",
+   "toNode": "backend/app/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/main.py->backend/app/api/analyze.py",
+   "fromNode": "backend/app/main.py",
+   "fromSide": "right",
+   "toNode": "backend/app/api/analyze.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/main.py->backend/app/api/health.py",
+   "fromNode": "backend/app/main.py",
+   "fromSide": "right",
+   "toNode": "backend/app/api/health.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/main.py->backend/app/api/history.py",
+   "fromNode": "backend/app/main.py",
+   "fromSide": "right",
+   "toNode": "backend/app/api/history.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/main.py->backend/app/api/tools.py",
+   "fromNode": "backend/app/main.py",
+   "fromSide": "right",
+   "toNode": "backend/app/api/tools.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/main.py->backend/app/cache/client.py",
+   "fromNode": "backend/app/main.py",
+   "fromSide": "right",
+   "toNode": "backend/app/cache/client.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/main.py->backend/app/config.py",
+   "fromNode": "backend/app/main.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/main.py->backend/app/db/session.py",
+   "fromNode": "backend/app/main.py",
+   "fromSide": "right",
+   "toNode": "backend/app/db/session.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/models/__init__.py->backend/app/models/incident.py",
+   "fromNode": "backend/app/models/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/incident.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/models/__init__.py->backend/app/models/output.py",
+   "fromNode": "backend/app/models/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/models/__init__.py->backend/app/models/retrieval.py",
+   "fromNode": "backend/app/models/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/retrieval.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/models/__init__.py->backend/app/models/risk.py",
+   "fromNode": "backend/app/models/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/risk.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/models/output.py->backend/app/models/incident.py",
+   "fromNode": "backend/app/models/output.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/incident.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/models/output.py->backend/app/models/retrieval.py",
+   "fromNode": "backend/app/models/output.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/retrieval.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/models/output.py->backend/app/models/risk.py",
+   "fromNode": "backend/app/models/output.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/risk.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/models/risk.py->backend/app/models/incident.py",
+   "fromNode": "backend/app/models/risk.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/incident.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/agents/graph.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/graph.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/cache/client.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/cache/client.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/config.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/db/crud.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/db/crud.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/db/session.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/db/session.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/ingest/loader.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/ingest/loader.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/ingest/preprocessor.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/ingest/preprocessor.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/stream.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/stream.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/pipeline.py->backend/app/models/output.py",
+   "fromNode": "backend/app/pipeline.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/compressor.py->backend/app/rag/chunker.py",
+   "fromNode": "backend/app/rag/compressor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/chunker.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/compressor.py->backend/app/rag/embedder.py",
+   "fromNode": "backend/app/rag/compressor.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/embedder.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/embedder.py->backend/app/config.py",
+   "fromNode": "backend/app/rag/embedder.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/local_store.py->backend/app/config.py",
+   "fromNode": "backend/app/rag/local_store.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/local_store.py->backend/app/rag/embedder.py",
+   "fromNode": "backend/app/rag/local_store.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/embedder.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/qdrant_store.py->backend/app/config.py",
+   "fromNode": "backend/app/rag/qdrant_store.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/qdrant_store.py->backend/app/rag/embedder.py",
+   "fromNode": "backend/app/rag/qdrant_store.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/embedder.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/retriever.py->backend/app/config.py",
+   "fromNode": "backend/app/rag/retriever.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/retriever.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/rag/retriever.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/retriever.py->backend/app/rag/vector_store.py",
+   "fromNode": "backend/app/rag/retriever.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/vector_store.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/retriever.py->backend/app/rag/bm25_index.py",
+   "fromNode": "backend/app/rag/retriever.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/bm25_index.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/retriever.py->backend/app/rag/compressor.py",
+   "fromNode": "backend/app/rag/retriever.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/compressor.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/retriever.py->backend/app/rag/embedder.py",
+   "fromNode": "backend/app/rag/retriever.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/embedder.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/retriever.py->backend/app/models/retrieval.py",
+   "fromNode": "backend/app/rag/retriever.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/retrieval.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/vector_store.py->backend/app/config.py",
+   "fromNode": "backend/app/rag/vector_store.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/vector_store.py->backend/app/rag/local_store.py",
+   "fromNode": "backend/app/rag/vector_store.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/local_store.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/vector_store.py->backend/app/rag/qdrant_store.py",
+   "fromNode": "backend/app/rag/vector_store.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/qdrant_store.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/stream.py->backend/app/config.py",
+   "fromNode": "backend/app/stream.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/stream.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/stream.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/stream.py->backend/app/models/output.py",
+   "fromNode": "backend/app/stream.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/__init__.py->backend/app/tools/actions.py",
+   "fromNode": "backend/app/tools/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/actions.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/__init__.py->backend/app/tools/parsing.py",
+   "fromNode": "backend/app/tools/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/parsing.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/__init__.py->backend/app/tools/patterns.py",
+   "fromNode": "backend/app/tools/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/patterns.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/__init__.py->backend/app/tools/retrieval.py",
+   "fromNode": "backend/app/tools/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/retrieval.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/__init__.py->backend/app/tools/scoring.py",
+   "fromNode": "backend/app/tools/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/scoring.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/__init__.py->backend/app/tools/streaming.py",
+   "fromNode": "backend/app/tools/__init__.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/streaming.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/actions.py->backend/app/config.py",
+   "fromNode": "backend/app/tools/actions.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/actions.py->backend/app/llm.py",
+   "fromNode": "backend/app/tools/actions.py",
+   "fromSide": "right",
+   "toNode": "backend/app/llm.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/actions.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/tools/actions.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/parsing.py->backend/app/config.py",
+   "fromNode": "backend/app/tools/parsing.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/parsing.py->backend/app/llm.py",
+   "fromNode": "backend/app/tools/parsing.py",
+   "fromSide": "right",
+   "toNode": "backend/app/llm.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/parsing.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/tools/parsing.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/parsing.py->backend/app/tools/scoring.py",
+   "fromNode": "backend/app/tools/parsing.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/scoring.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/parsing.py->backend/app/models/incident.py",
+   "fromNode": "backend/app/tools/parsing.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/incident.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/streaming.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/tools/streaming.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/streaming.py->backend/app/stream.py",
+   "fromNode": "backend/app/tools/streaming.py",
+   "fromSide": "right",
+   "toNode": "backend/app/stream.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/streaming.py->backend/app/models/output.py",
+   "fromNode": "backend/app/tools/streaming.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/output.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/base.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/agents/nodes/base.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/base.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/base.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/base.py->backend/app/tools/streaming.py",
+   "fromNode": "backend/app/agents/nodes/base.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/streaming.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/knowledge_graph/serializer.py->backend/app/config.py",
+   "fromNode": "backend/app/knowledge_graph/serializer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/rag/chunker.py->backend/app/rag/embedder.py",
+   "fromNode": "backend/app/rag/chunker.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/embedder.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/risk_scorer.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/agents/nodes/risk_scorer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/risk_scorer.py->backend/app/tools/__init__.py",
+   "fromNode": "backend/app/agents/nodes/risk_scorer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/risk_scorer.py->backend/app/agents/state.py",
+   "fromNode": "backend/app/agents/nodes/risk_scorer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/state.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/risk_scorer.py->backend/app/agents/nodes/base.py",
+   "fromNode": "backend/app/agents/nodes/risk_scorer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/agents/nodes/base.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/risk_scorer.py->backend/app/tools/patterns.py",
+   "fromNode": "backend/app/agents/nodes/risk_scorer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/patterns.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/risk_scorer.py->backend/app/tools/retrieval.py",
+   "fromNode": "backend/app/agents/nodes/risk_scorer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/retrieval.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/agents/nodes/risk_scorer.py->backend/app/tools/scoring.py",
+   "fromNode": "backend/app/agents/nodes/risk_scorer.py",
+   "fromSide": "right",
+   "toNode": "backend/app/tools/scoring.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/ingest/loader.py->backend/app/config.py",
+   "fromNode": "backend/app/ingest/loader.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/patterns.py->backend/app/config.py",
+   "fromNode": "backend/app/tools/patterns.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/patterns.py->backend/app/knowledge_graph/graph.py",
+   "fromNode": "backend/app/tools/patterns.py",
+   "fromSide": "right",
+   "toNode": "backend/app/knowledge_graph/graph.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/patterns.py->backend/app/knowledge_graph/serializer.py",
+   "fromNode": "backend/app/tools/patterns.py",
+   "fromSide": "right",
+   "toNode": "backend/app/knowledge_graph/serializer.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/patterns.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/tools/patterns.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/patterns.py->backend/app/models/risk.py",
+   "fromNode": "backend/app/tools/patterns.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/risk.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/retrieval.py->backend/app/config.py",
+   "fromNode": "backend/app/tools/retrieval.py",
+   "fromSide": "right",
+   "toNode": "backend/app/config.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/retrieval.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/tools/retrieval.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/retrieval.py->backend/app/rag/retriever.py",
+   "fromNode": "backend/app/tools/retrieval.py",
+   "fromSide": "right",
+   "toNode": "backend/app/rag/retriever.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/retrieval.py->backend/app/models/retrieval.py",
+   "fromNode": "backend/app/tools/retrieval.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/retrieval.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/scoring.py->backend/app/llm.py",
+   "fromNode": "backend/app/tools/scoring.py",
+   "fromSide": "right",
+   "toNode": "backend/app/llm.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/scoring.py->backend/app/models/__init__.py",
+   "fromNode": "backend/app/tools/scoring.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/__init__.py",
+   "toSide": "left"
+  },
+  {
+   "id": "backend/app/tools/scoring.py->backend/app/models/risk.py",
+   "fromNode": "backend/app/tools/scoring.py",
+   "fromSide": "right",
+   "toNode": "backend/app/models/risk.py",
+   "toSide": "left"
+  }
+ ]
+}

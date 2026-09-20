@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: sentinel-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ENVIRONMENT
+        value: production
+      # Render terminates TLS at its own proxy, so the forwarded address is
+      # the real client and the rate limit should key on it.
+      - key: TRUST_PROXY_HEADERS
+        value: "true"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      # Optional: leave unset to use the bundled local vector index.
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false

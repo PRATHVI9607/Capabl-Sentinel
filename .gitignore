@@ -1,0 +1,95 @@
+# ---------------------------------------------------------------------------
+# Secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Node / Next.js
+# ---------------------------------------------------------------------------
+node_modules/
+.next/
+out/
+.vercel/
+next-env.d.ts
+*.tsbuildinfo
+.eslintcache
+
+# Scratch copies of starter templates
+.template-reference-*/
+
+# ---------------------------------------------------------------------------
+# Local databases
+# ---------------------------------------------------------------------------
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ---------------------------------------------------------------------------
+# Corpus
+# ---------------------------------------------------------------------------
+# Source documents are large and re-downloadable. The generated indexes
+# (vectors_*.npz/.json, bm25_*.pkl, knowledge_graph.json, corpus_manifest.json)
+# ARE the deployable corpus and stay tracked — see backend/data/*/README.md.
+backend/data/incidents/*
+!backend/data/incidents/README.md
+backend/data/regulatory/*
+!backend/data/regulatory/README.md
+
+# Model weights, downloaded on first use
+backend/data/fastembed/
+backend/data/flashrank/
+
+# ---------------------------------------------------------------------------
+# Local agent + editor wiring — machine-specific, not part of the product
+# ---------------------------------------------------------------------------
+.codegraph/
+.mcp.json
+.claude/
+.github/
+CODEX_FRONTEND_BRIEF.md
+.idea/
+.vscode/
+*.swp
+*~
+
+# ---------------------------------------------------------------------------
+# OS
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini

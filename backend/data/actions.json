@@ -1,0 +1,72 @@
+{
+  "_comment": "Corrective action templates per hazard type. These are authored controls, not retrieved regulation text: regulation_reference points a reader at the applicable standard, it does not quote it. Retrieved clause text always comes from the regulatory index instead.",
+  "lockout_tagout": [
+    {"urgency": "IMMEDIATE", "action": "Stop all maintenance on the affected equipment until a machine-specific energy control procedure is posted at the machine.", "rationale": "Work continuing under the same conditions reproduces the exposure.", "regulation_reference": "OSHA 29 CFR 1910.147(c)(4)"},
+    {"urgency": "IMMEDIATE", "action": "Issue individually keyed locks and tags to every authorised employee and verify a zero-energy state before any restart.", "rationale": "Shared or missing locks let a second person re-energise equipment under someone else.", "regulation_reference": "OSHA 29 CFR 1910.147(c)(5)"},
+    {"urgency": "SHORT_TERM", "action": "Retrain authorised and affected employees on isolation, stored-energy release, and the verification step.", "rationale": "Isolation failures cluster around the verify step more than the lock step.", "regulation_reference": "OSHA 29 CFR 1910.147(c)(7)"},
+    {"urgency": "LONG_TERM", "action": "Add the annual periodic inspection of each energy control procedure to the EHS calendar with a named inspector.", "rationale": "Procedures drift from the equipment as machines are modified.", "regulation_reference": "OSHA 29 CFR 1910.147(c)(6)"}
+  ],
+  "confined_space": [
+    {"urgency": "IMMEDIATE", "action": "Suspend all permit-required space entries pending atmospheric testing and a signed permit for each entry.", "rationale": "Atmosphere in a closed space changes faster than an entrant can react.", "regulation_reference": "OSHA 29 CFR 1910.146(d)"},
+    {"urgency": "IMMEDIATE", "action": "Post a trained attendant with a means of summoning rescue outside every occupied space.", "rationale": "Most confined-space fatalities include a second victim who entered to help.", "regulation_reference": "OSHA 29 CFR 1910.146(i)"},
+    {"urgency": "SHORT_TERM", "action": "Provide calibrated multi-gas monitors and document pre-entry and continuous monitoring results on the permit.", "rationale": "An untested or uncalibrated instrument is indistinguishable from no test.", "regulation_reference": "OSHA 29 CFR 1910.146(c)(5)"},
+    {"urgency": "SHORT_TERM", "action": "Run a non-entry rescue drill with the retrieval system actually installed on site.", "rationale": "Retrieval equipment that has never been rigged is rarely rigged correctly under pressure.", "regulation_reference": "OSHA 29 CFR 1910.146(k)"},
+    {"urgency": "LONG_TERM", "action": "Re-survey the site and reclassify every confined space, updating signage and the space inventory.", "rationale": "Unlabelled spaces are entered as if they were ordinary work areas.", "regulation_reference": "OSHA 29 CFR 1910.146(c)(2)"}
+  ],
+  "machine_guarding": [
+    {"urgency": "IMMEDIATE", "action": "Lock out and tag out of service every machine found with a removed, defeated or missing guard.", "rationale": "An exposed point of operation injures on the first reach, not the hundredth.", "regulation_reference": "OSHA 29 CFR 1910.212(a)(1)"},
+    {"urgency": "IMMEDIATE", "action": "Prohibit jam clearing, cleaning and adjustment while any machine is running.", "rationale": "Reaching into a running machine is the dominant mechanism in caught-in injuries.", "regulation_reference": "OSHA 29 CFR 1910.212(a)(3)"},
+    {"urgency": "SHORT_TERM", "action": "Audit every machine in the area for guarding at the point of operation, nip points and rotating parts; log each finding to closure.", "rationale": "A defeated guard on one machine usually reflects a production pressure affecting the whole line.", "regulation_reference": "OSHA 29 CFR 1910.212"},
+    {"urgency": "LONG_TERM", "action": "Fit interlocked guards or presence-sensing devices on machines where frequent access is genuinely required.", "rationale": "Guards removed for access stay removed; design out the need instead.", "regulation_reference": "OSHA 29 CFR 1910.212(a)(1)"}
+  ],
+  "fall_protection": [
+    {"urgency": "IMMEDIATE", "action": "Stop work at height and install guardrails, covers or a compliant personal fall arrest system at every exposed edge and opening.", "rationale": "Falls are the leading cause of construction fatalities and are fatal from low heights.", "regulation_reference": "OSHA 29 CFR 1926.501(b)"},
+    {"urgency": "IMMEDIATE", "action": "Inspect and remove from service all harnesses, lanyards and anchor points showing damage or exceeded date.", "rationale": "Arrest equipment fails silently until it is loaded.", "regulation_reference": "OSHA 29 CFR 1926.502(d)"},
+    {"urgency": "SHORT_TERM", "action": "Train every exposed worker on hazard recognition, anchorage selection and the correct use of the site systems.", "rationale": "Harnesses worn but not tied off are a training failure, not an equipment failure.", "regulation_reference": "OSHA 29 CFR 1926.503(a)"},
+    {"urgency": "LONG_TERM", "action": "Write a site fall-protection plan that names anchorage points and rescue arrangements before work at height is scheduled.", "rationale": "Post-arrest suspension trauma needs a plan made in advance.", "regulation_reference": "OSHA 29 CFR 1926.502(d)(20)"}
+  ],
+  "chemical_release": [
+    {"urgency": "IMMEDIATE", "action": "Isolate and depressurise the affected system; restrict access to the release area until the atmosphere is verified clear.", "rationale": "Secondary exposure during response is common after a release.", "regulation_reference": "OSHA 29 CFR 1910.120(q)"},
+    {"urgency": "IMMEDIATE", "action": "Verify every relief path on the affected system is unobstructed and correctly set.", "rationale": "A blocked relief path converts an upset into a rupture.", "regulation_reference": "OSHA 29 CFR 1910.119(j)"},
+    {"urgency": "SHORT_TERM", "action": "Review mechanical integrity records for the failed component and inspect comparable equipment on the same service.", "rationale": "Corrosion and erosion affect a whole service, not one fitting.", "regulation_reference": "OSHA 29 CFR 1910.119(j)(4)"},
+    {"urgency": "SHORT_TERM", "action": "Reconcile the process safety information and P&IDs against the equipment as it is actually installed.", "rationale": "Undocumented modifications defeat every downstream hazard review.", "regulation_reference": "OSHA 29 CFR 1910.119(d)"},
+    {"urgency": "LONG_TERM", "action": "Require a management-of-change review with sign-off for any process, equipment or procedural change, including temporary repairs.", "rationale": "Temporary changes that outlive their review are a recurring cause of major releases.", "regulation_reference": "OSHA 29 CFR 1910.119(l)"}
+  ],
+  "fire_explosion": [
+    {"urgency": "IMMEDIATE", "action": "Remove accumulated combustible dust from all horizontal surfaces using approved non-sparking methods.", "rationale": "Settled dust supplies the secondary explosion that causes most of the damage.", "regulation_reference": "OSHA 29 CFR 1910.22(a)"},
+    {"urgency": "IMMEDIATE", "action": "Restore any impaired fire detection or suppression system to service, or post a continuous fire watch until it is.", "rationale": "An impaired system removes the last barrier while the hazard is highest.", "regulation_reference": "OSHA 29 CFR 1910.160"},
+    {"urgency": "SHORT_TERM", "action": "Re-verify the hazardous-area electrical classification and replace non-rated equipment inside classified zones.", "rationale": "Non-rated equipment is a standing ignition source in a flammable atmosphere.", "regulation_reference": "OSHA 29 CFR 1910.307"},
+    {"urgency": "LONG_TERM", "action": "Commission a dust hazard analysis or equivalent combustible-material assessment for the facility.", "rationale": "Housekeeping alone does not address the equipment that generates the dust.", "regulation_reference": "OSHA 29 CFR 1910.22"}
+  ],
+  "electrical": [
+    {"urgency": "IMMEDIATE", "action": "De-energise and lock out the affected circuits; prohibit energized work without a written energized-work permit.", "rationale": "Working live is the single largest contributor to arc-flash injury.", "regulation_reference": "OSHA 29 CFR 1910.333(a)"},
+    {"urgency": "IMMEDIATE", "action": "Remove damaged cords, tools and enclosures with missing covers from service.", "rationale": "Exposed conductors are an uncontrolled contact hazard for everyone nearby.", "regulation_reference": "OSHA 29 CFR 1910.334(a)"},
+    {"urgency": "SHORT_TERM", "action": "Issue arc-rated PPE matched to the incident energy of each panel and label panels with the calculated rating.", "rationale": "PPE selection is impossible without a posted incident-energy value.", "regulation_reference": "OSHA 29 CFR 1910.335(a)"},
+    {"urgency": "LONG_TERM", "action": "Complete an arc-flash study and set up a periodic revalidation cycle after electrical system changes.", "rationale": "System changes invalidate previous incident-energy calculations.", "regulation_reference": "OSHA 29 CFR 1910.303(b)"}
+  ],
+  "struck_by": [
+    {"urgency": "IMMEDIATE", "action": "Physically separate pedestrian routes from mobile equipment routes with barriers and marked crossings.", "rationale": "Administrative controls alone do not survive a busy shift.", "regulation_reference": "OSHA 29 CFR 1910.176(a)"},
+    {"urgency": "IMMEDIATE", "action": "Prohibit any work or travel beneath a suspended load.", "rationale": "Rigging failure gives no warning and no time to move.", "regulation_reference": "OSHA 29 CFR 1926.1425"},
+    {"urgency": "SHORT_TERM", "action": "Require a spotter for all reversing and blind-lift operations and verify operator certification.", "rationale": "Blind-side travel is the dominant mechanism in powered-truck fatalities.", "regulation_reference": "OSHA 29 CFR 1910.178(l)"},
+    {"urgency": "LONG_TERM", "action": "Fit proximity detection or camera systems to mobile plant that routinely operates near people.", "rationale": "Engineering controls persist when supervision does not.", "regulation_reference": "OSHA 29 CFR 1910.178"}
+  ],
+  "hot_work": [
+    {"urgency": "IMMEDIATE", "action": "Halt all hot work until a permit system with a pre-work hazard check is in force.", "rationale": "The permit is the only step that forces the area survey.", "regulation_reference": "OSHA 29 CFR 1910.252(a)"},
+    {"urgency": "IMMEDIATE", "action": "Assign a fire watch during the work and for at least 30 minutes after it finishes.", "rationale": "Most hot-work fires are discovered after the crew has left.", "regulation_reference": "OSHA 29 CFR 1910.252(a)(2)(iii)"},
+    {"urgency": "SHORT_TERM", "action": "Remove or shield combustibles within the required radius and confirm containers and lines are gas free before cutting.", "rationale": "Residue in a vessel ignites from the first spark.", "regulation_reference": "OSHA 29 CFR 1910.252(a)(3)"},
+    {"urgency": "LONG_TERM", "action": "Establish designated hot-work areas so routine cutting and welding leaves the production floor.", "rationale": "Fixed areas remove the permit decision from time-pressured crews.", "regulation_reference": "OSHA 29 CFR 1910.252(a)(2)"}
+  ],
+  "material_handling": [
+    {"urgency": "IMMEDIATE", "action": "Down-rate or remove from service any lifting equipment or rack loaded beyond its marked capacity.", "rationale": "Capacity exceedance compounds with every subsequent lift.", "regulation_reference": "OSHA 29 CFR 1910.176(b)"},
+    {"urgency": "IMMEDIATE", "action": "Remove damaged slings, chains and hooks from service and tag them for destruction.", "rationale": "Damaged rigging returned to the crib will be used again.", "regulation_reference": "OSHA 29 CFR 1910.184(d)"},
+    {"urgency": "SHORT_TERM", "action": "Restack stored material to stable heights on level footing and mark maximum stacking heights.", "rationale": "Stack collapse injures people who are not part of the task.", "regulation_reference": "OSHA 29 CFR 1910.176(b)"},
+    {"urgency": "LONG_TERM", "action": "Introduce mechanical lifting aids for routinely handled loads and review task design.", "rationale": "Repeated manual handling produces cumulative injury that no training prevents.", "regulation_reference": "OSHA Act Section 5(a)(1)"}
+  ],
+  "general": [
+    {"urgency": "IMMEDIATE", "action": "Stop the task that produced the incident until the specific hazard is controlled or the work is re-planned.", "rationale": "The conditions that produced one incident are still present for the next shift.", "regulation_reference": "OSHA Act Section 5(a)(1)"},
+    {"urgency": "IMMEDIATE", "action": "Brief every affected crew on what happened and what has changed before they return to the area.", "rationale": "Workers cannot avoid a hazard nobody has described to them.", "regulation_reference": "OSHA Act Section 5(a)(1)"},
+    {"urgency": "SHORT_TERM", "action": "Complete a documented root-cause investigation covering the management-system failure, not only the immediate act.", "rationale": "Stopping at the immediate cause leaves the system that produced it intact.", "regulation_reference": null},
+    {"urgency": "SHORT_TERM", "action": "Verify training records for everyone performing the task and close any gap before they resume it.", "rationale": "Untrained exposure is the most frequently cited contributing factor.", "regulation_reference": "OSHA 29 CFR 1910.132(f)"},
+    {"urgency": "LONG_TERM", "action": "Add the identified precursor conditions as explicit checks in the routine inspection programme.", "rationale": "Precursors are only useful once someone is looking for them on a schedule.", "regulation_reference": null}
+  ]
+}
