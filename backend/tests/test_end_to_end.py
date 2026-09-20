@@ -222,7 +222,7 @@ def corpus(tmp_path, monkeypatch):
 @pytest.fixture
 def fake_llm(monkeypatch):
     llm_double = FakeLLM(LOCKOUT_INCIDENT_OVERRIDES, PRIORITY_ALERT_TEXT)
-    monkeypatch.setattr(llm, "_providers", lambda *, fast: [("fake", llm_double)])
+    monkeypatch.setattr(llm, "_provider_order", lambda *, fast: [("fake", lambda: llm_double)])
     # The classifier caches nothing, but it holds its own import of the helper.
     monkeypatch.setattr(classifier, "complete_structured", llm.complete_structured)
     return llm_double
@@ -434,7 +434,9 @@ class TestDegradedInputs:
     ) -> None:
         working = FakeLLM(LOCKOUT_INCIDENT_OVERRIDES, PRIORITY_ALERT_TEXT)
         monkeypatch.setattr(
-            llm, "_providers", lambda *, fast: [("broken", FailingLLM()), ("working", working)]
+            llm,
+            "_provider_order",
+            lambda *, fast: [("broken", FailingLLM), ("working", lambda: working)],
         )
         report = analyse(client)["report"]
         assert report["incident"]["industry"] == "manufacturing"
@@ -442,7 +444,7 @@ class TestDegradedInputs:
     def test_no_provider_at_all_still_produces_a_scored_report(
         self, client: TestClient, monkeypatch
     ) -> None:
-        monkeypatch.setattr(llm, "_providers", lambda *, fast: [])
+        monkeypatch.setattr(llm, "_provider_order", lambda *, fast: [])
         report = analyse(client)["report"]
         assert report["risk_score"]["tier"] in {"CRITICAL", "HIGH", "MEDIUM", "LOW", "UNKNOWN"}
         assert report["incident"]["extraction_confidence"] < 0.5

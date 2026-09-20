@@ -272,7 +272,7 @@ class TestEntityExtraction:
         assert not [e for e in found if e.source == "llm"]
 
     async def test_without_an_llm_the_ruler_result_stands(self, monkeypatch) -> None:
-        monkeypatch.setattr(llm, "_providers", lambda *, fast: [])
+        monkeypatch.setattr(llm, "_provider_order", lambda *, fast: [])
         found = await parsing.extract_hazard_entities(self.REPORT)
         assert found
         assert all(e.source == "spacy" for e in found)
@@ -285,7 +285,9 @@ def _install_llm(monkeypatch, entities: dict[str, str]) -> None:
         },
         "_Verification": {"keep": []},
     }
-    monkeypatch.setattr(llm, "_providers", lambda *, fast: [("fake", FakeLLM(overrides, "unused"))])
+    monkeypatch.setattr(
+        llm, "_provider_order", lambda *, fast: [("fake", lambda: FakeLLM(overrides, "unused"))]
+    )
 
 
 class TestIndustryFilterDoesNotStarveRetrieval:

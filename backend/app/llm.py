@@ -61,8 +61,14 @@ def _groq() -> Any | None:
     )
 
 
-def _providers(*, fast: bool) -> list[tuple[str, Any]]:
-    """Providers to try, in order, for this call.
+def _provider_order(*, fast: bool) -> list[tuple[str, Any]]:
+    """Provider *factories* to try, in order, for this call.
+
+    Factories, not instances: constructing one imports its client library, and
+    langchain-google-genai costs 41MB of resident memory (it pulls in grpc and
+    protobuf). Building both up front paid that on every call even when Groq
+    answered first, which on a 512MB instance is the difference between fitting
+    and being OOM-killed. The fallback is now only built if the primary fails.
 
     Groq leads both paths. The PRD put Gemini first for reasoning, but its free
     tier allows 20 generate_content requests per day on current flash models --
@@ -77,11 +83,12 @@ def _providers(*, fast: bool) -> list[tuple[str, Any]]:
     # 20/day quota on them is what exhausts it before the reasoning calls run.
     if fast or not settings.prefer_gemini:
         order.reverse()
-    return [(name, llm) for name, factory in order if (llm := factory()) is not None]
+    return order
 
 
 def any_provider_configured() -> bool:
-    return bool(_providers(fast=False))
+    """True when a key is set. Deliberately does not construct a client."""
+    return bool(settings.groq_api_key or settings.gemini_api_key)
 
 
 async def complete_structured(messages: Messages, schema: type[TModel], *, fast: bool = False) -> TModel:
@@ -95,15 +102,21 @@ async def complete_text(messages: Messages, *, fast: bool = False) -> str:
 
 
 async def _attempt(messages: Messages, *, fast: bool, bind) -> Any:
-    providers = _providers(fast=fast)
-    if not providers:
-        raise LLMUnavailable("No LLM configured. Set GEMINI_API_KEY or GROQ_API_KEY.")
-
     last_error: Exception | None = None
-    for name, llm in providers:
+    attempted = False
+    for name, factory in _provider_order(fast=fast):
+        # Constructing the client is what imports its library, so it happens
+        # here -- once the previous provider has actually failed.
+        llm = factory()
+        if llm is None:
+            continue
+        attempted = True
         try:
             return await bind(llm).ainvoke(list(messages))
         except Exception as exc:  # noqa: BLE001 - any provider error is a reason to fall back
             logger.warning("LLM provider %s failed: %s", name, exc)
             last_error = exc
+
+    if not attempted:
+        raise LLMUnavailable("No LLM configured. Set GEMINI_API_KEY or GROQ_API_KEY.")
     raise LLMUnavailable("Every configured LLM provider failed") from last_error

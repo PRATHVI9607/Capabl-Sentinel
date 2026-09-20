@@ -186,20 +186,32 @@ class TestToolIntrospection:
 class TestConcurrencyLimit:
     """Analyses queue rather than exhausting a small instance's memory."""
 
-    def test_a_second_upload_is_told_it_is_queued(self, client: TestClient, monkeypatch) -> None:
+    async def test_a_waiting_analysis_announces_itself(self, monkeypatch, tmp_path) -> None:
         import asyncio
 
         from app import pipeline
+        from app.stream import broker
 
-        # Hold the only slot so the next analysis has to wait for it.
-        held = asyncio.Semaphore(1)
-        monkeypatch.setattr(pipeline, "_slots", held)
-        asyncio.get_event_loop_policy().new_event_loop().run_until_complete(held.acquire())
+        # Acquired on this test's own loop, and the task is cancelled rather
+        # than left to wait -- holding it across loops deadlocks the suite.
+        locked = asyncio.Semaphore(1)
+        await locked.acquire()
+        monkeypatch.setattr(pipeline, "_slots", locked)
 
-        analysis_id = upload(client, "report.pdf", UNPARSEABLE_PDF).json()["analysis_id"]
-        body = client.get(f"/analyze/{analysis_id}/stream").text
-        assert '"stage":"queued"' in body, "a waiting caller should be told, not left silent"
+        pdf = tmp_path / "queued.pdf"
+        pdf.write_bytes(UNPARSEABLE_PDF)
+        broker.open("queued-test")
 
-    def test_the_limit_is_configurable(self) -> None:
-        # One by default because a free instance cannot embed twice at once.
-        assert settings.max_concurrent_analyses >= 1
+        task = asyncio.create_task(pipeline.run_analysis("queued-test", pdf, "queued.pdf", "hash"))
+        try:
+            await asyncio.sleep(0.05)
+            stages = [u.stage for u in broker._channels["queued-test"].history]
+            assert "queued" in stages, "a waiting caller should be told, not left silent"
+        finally:
+            task.cancel()
+            await asyncio.gather(task, return_exceptions=True)
+            locked.release()
+
+    def test_one_at_a_time_by_default(self) -> None:
+        # A 512MB instance cannot hold two embedding sessions at once.
+        assert settings.max_concurrent_analyses == 1
